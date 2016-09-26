@@ -8,12 +8,15 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 /**
+ * index下级页面请求
  * Created by Administrator on 2016/9/26.
  */
-@WebServlet("/")
+@WebServlet("/index/next/*")
 public class indexServlet extends HttpServlet{
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        int id = Integer.parseInt(req.getParameter("id"));
+
 
     }
 

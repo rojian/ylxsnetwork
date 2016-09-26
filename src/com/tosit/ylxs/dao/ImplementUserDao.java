@@ -5,7 +5,7 @@ import com.tosit.ylxs.entity.User;
 /**
  * Created by Administrator on 2016/9/26.
  */
-public interface ImplementDao {
+public interface ImplementUserDao {
     /**
      * 添加用户
      * @return 判断是否创建成功
@@ -30,5 +30,7 @@ public interface ImplementDao {
      * @return
      */
     public boolean findUser(User user);
+
+
 
 }
