@@ -17,8 +17,8 @@ public interface  ImplementArticleDao {
     public Article selectArticleById(int id);
 
     /**
-     * 查询全部Article
+     * 通过板块plate查询Article
      * @return Article对象集合
      */
-    public List<Article>  selectArticleAll();
+    public List<Article>  selectArticleAll(String plate);
 }
