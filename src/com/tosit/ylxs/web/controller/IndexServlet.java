@@ -30,7 +30,7 @@ public class IndexServlet extends HttpServlet {
         Gson gson=new Gson();
         ArticleDao articleDao=new ArticleDao();
         List<Article> articles=articleDao.selectArticleByPlate(plate);
-        System.out.println(articles.get(1).getUptime());
+//        System.out.println(articles.get(1).getUptime());
         String jsonObjects=gson.toJson(articles);
         out.write(jsonObjects);
     }
