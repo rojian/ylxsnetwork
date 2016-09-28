@@ -155,25 +155,15 @@
                             <ul>
 
                                 <li ng-repeat="each in jqxw"><i class="scenic-i"></i><a href="threeLevel/activity.html?id={{each.id}}">{{each.title}}</a><span>{{each.uptime}}</span></li>
-                                id
                                 </li>
 
                             </ul>
                         </div>
 
 
-                        <div class="scenic-text" id="top-dh0" style="display:block">
+                        <div class="scenic-text" id="top-dh0" style="display:block" ng-controller="景区活动">
                             <ul>
-                                <li><i class="scenic-i"></i><a href="threeLevel/activity.html">2加强组织建设 推动景区跨越发展
-                                    以优异的...</a><span>2014.09.09</span></li>
-                                <li><i class="scenic-i"></i><a href="threeLevel/activity.html">加强组织建设 推动景区跨越发展
-                                    以优异的...</a><span>2014.09.09</span></li>
-                                <li><i class="scenic-i"></i><a href="threeLevel/activity.html">加强组织建设 推动景区跨越发展
-                                    以优异的...</a><span>2014.09.09</span></li>
-                                <li><i class="scenic-i"></i><a href="threeLevel/activity.html">加强组织建设 推动景区跨越发展
-                                    以优异的...</a><span>2014.09.09</span></li>
-                                <li><i class="scenic-i"></i><a href="threeLevel/activity.html">加强组织建设 推动景区跨越发展
-                                    以优异的...</a><span>2014.09.09</span></li>
+                                <li ng-repeat="each in jqxw"><i class="scenic-i"></i><a href="threeLevel/activity.html?id={{each.id}}">{{each.title}}</a><span>{{each.uptime}}</span></li>
                             </ul>
                         </div>
 
@@ -446,6 +436,15 @@
     angular.module('myApp', []).controller('景区新闻', function($scope,$http) {
         var url="http://localhost:8080/indexServlet/*";
         var config = {params: {plate: '景区新闻'}};
+        var postData = {text:'long blob of text'};
+        $http.post(url, postData, config).success( function(json) {
+            $scope.jqxw = json;
+            console.info(json);
+        });
+    });
+    angular.module('myApp', []).controller('景区活动', function($scope,$http) {
+        var url="http://localhost:8080/indexServlet/*";
+        var config = {params: {plate: '景区活动'}};
         var postData = {text:'long blob of text'};
         $http.post(url, postData, config).success( function(json) {
             $scope.jqxw = json;
