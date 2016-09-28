@@ -13,7 +13,7 @@ public class Article {
     private String brief; //简介
     private String content; //详细内容
     private String path; //图片路径
-    private Date uptime; //上传时间
+    private String uptime; //上传时间
 
     public int getId() {
         return id;
@@ -63,11 +63,11 @@ public class Article {
         this.path = path;
     }
 
-    public Date getUptime() {
+    public String getUptime() {
         return uptime;
     }
 
-    public void setUptime(Date uptime) {
+    public void setUptime(String uptime) {
         this.uptime = uptime;
     }
 }

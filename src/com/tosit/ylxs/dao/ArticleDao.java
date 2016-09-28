@@ -18,7 +18,7 @@ public class ArticleDao implements ImplementArticleDao {
             e.printStackTrace();
         }
     }
-    public static final String URL = "jdbc:mysql://192.168.1.113:3306/ylxsnetword";
+    public static final String URL = "jdbc:mysql://192.168.1.119:3306/ylxsnetword";
     public static final String USER = "root";
     public static final String PASSWORD = "root";
 
@@ -38,7 +38,7 @@ public class ArticleDao implements ImplementArticleDao {
                 String brief = result.getString("brief");
                 String content = result.getString("content");
                 String path = result.getString("path");
-                Date uptime = result.getDate("uptime");
+                String uptime = result.getDate("uptime").toString();
 
                 article.setId(id);
                 article.setTitle(title);
@@ -70,7 +70,7 @@ public class ArticleDao implements ImplementArticleDao {
                 String brief = result.getString("brief");
                 String content = result.getString("content");
                 String path = result.getString("path");
-                Date uptime = result.getDate("uptime");
+                String uptime = result.getDate("uptime").toString();
                 Article article = new Article();
                 article.setId(id);
                 article.setTitle(title);
@@ -90,7 +90,7 @@ public class ArticleDao implements ImplementArticleDao {
     public static void main(String[] args) {
         ArticleDao articleDao = new ArticleDao();
         List<Article> articles = articleDao.selectArticleByPlate("景区新闻");
-        System.out.println(articles);
+        System.out.println(articles.get(1).getUptime());
 
     }
 }

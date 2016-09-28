@@ -23,14 +23,14 @@ public class IndexServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 //       resp.setHeader("Content-type","text/html;charset=utf-8");
-        resp.setCharacterEncoding("utf-8");
-        resp.setContentType("text/json;charset=utf-8");
+
         PrintWriter out =resp.getWriter();
         String plate=req.getParameter("plate");
 //        System.out.println(plate);
         Gson gson=new Gson();
         ArticleDao articleDao=new ArticleDao();
         List<Article> articles=articleDao.selectArticleByPlate(plate);
+        System.out.println(articles.get(1).getUptime());
         String jsonObjects=gson.toJson(articles);
         out.write(jsonObjects);
     }
