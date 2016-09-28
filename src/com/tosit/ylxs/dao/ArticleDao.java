@@ -64,7 +64,8 @@ public class ArticleDao implements ImplementArticleDao {
             PreparedStatement pstm = conn.prepareStatement("select*from ylxsnetwork_article a  inner join ylxsnetwork_plate p on p.plateId=a.plateId where  p.plate=?");
             pstm.setString(1, inplate);
             ResultSet result = pstm.executeQuery();
-            while (result.next()) {
+            int i=0;
+            while (result.next()&&i<5) {
                 int id = result.getInt("id");
                 String title = result.getString("title");
                 String brief = result.getString("brief");
@@ -79,6 +80,7 @@ public class ArticleDao implements ImplementArticleDao {
                 article.setPath(path);
                 article.setUptime(uptime);
                 articles.add(article);
+                i++;
             }
         } catch (SQLException e) {
             e.printStackTrace();
