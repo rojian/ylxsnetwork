@@ -26,7 +26,7 @@ public class IndexServlet extends HttpServlet {
 
         PrintWriter out =resp.getWriter();
         String plate=req.getParameter("plate");
-//        System.out.println(plate);
+        System.out.println(plate);
         Gson gson=new Gson();
         ArticleDao articleDao=new ArticleDao();
         List<Article> articles=articleDao.selectArticleByPlate(plate);
