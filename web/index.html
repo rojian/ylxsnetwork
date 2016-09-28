@@ -4,8 +4,37 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>玉龙雪山商务网-首页</title>
 <link rel="stylesheet" type="text/css" href="css/css.css"/>
-<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="js/jquery.min.js"></script>
 <script type="text/javascript" src="js/focus.js"></script>
+    <script src="js/angular.min.js"></script>
+    <script src=""></script>
+
+    <script type="text/javascript">
+
+       $(document).ready(function(){
+
+           $.ajax({
+               type:"post",
+               url:"indexServlet",
+               data:"plate=景区新闻",
+               success:function(o) {
+//                   var o=JSON.parse(msg)
+//                  console.info(o);
+//                  for(var index in o){
+//                      console.info(o[index].title)
+//                  }
+
+                   $.each(o,function(index,item){
+                      var title=item.title;
+                       var a="<i class='scenic-i'></i><a href='threeLevel/activity.html?id="+item.id+"'>+"title"+</a><span>"+item.uptime+"</span>";
+                       $("#top-dh0 ul").append(a);
+                        var b="<a href=''></a>";
+                   });
+               }
+           });
+       });
+
+    </script>
 </head>
 
 <body class="YL-home-body">
