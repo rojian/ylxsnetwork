@@ -11,7 +11,7 @@ import java.io.PrintWriter;
 /**
  * Created by Administrator on 2016/9/29.
  */
-@WebServlet("/twoStage/activityServlet")
+@WebServlet("/twoStage/activity")
 public class SecondServlet extends HttpServlet{
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
