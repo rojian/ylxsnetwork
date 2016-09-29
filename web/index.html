@@ -10,7 +10,7 @@
     <script type="application/javascript" src="js/angular.min.js"></script>
 </head>
 
-<body class="YL-home-body"  ng-app="myApp">
+<body class="YL-home-body"  ng-app="myApp" ng-controller="c">
 
 <!--top flash begin-->
 <div class="YL-home-flash">
@@ -150,20 +150,25 @@
                             </div>
 
                         </div>
-
-                        <div class="scenic-text" id="top-dh1" style="display:none" ng-controller="景区新闻">
+                        <!--景区新闻-->
+                        <div class="scenic-text" id="top-dh1" style="display:none" ng-controller="c">
                             <ul>
-
-                                <li ng-repeat="each in jqxw"><i class="scenic-i"></i><a href="threeLevel/activity.html?id={{each.id}}">{{each.title}}</a><span>{{each.uptime}}</span></li>
+                                <li ng-repeat="each in jqxw">
+                                    <i class="scenic-i"></i>
+                                    <a href="threeLevel/activity.html?id={{each.id}}">{{each.title}}</a>
+                                    <span>{{each.uptime}}</span>
                                 </li>
-
                             </ul>
                         </div>
 
-
-                        <div class="scenic-text" id="top-dh0" style="display:block" ng-controller="景区活动">
+                        <!--景区活动-->
+                        <div class="scenic-text" id="top-dh0" style="display:block" ng-controller="c">
                             <ul>
-                                <li ng-repeat="each in jqxw"><i class="scenic-i"></i><a href="threeLevel/activity.html?id={{each.id}}">{{each.title}}</a><span>{{each.uptime}}</span></li>
+                                <li ng-repeat="each in jqhd">
+                                    <i class="scenic-i"></i>
+                                    <a href="threeLevel/activity.html?id={{each.id}}">{{each.title}}</a>
+                                    <span>{{each.uptime}}</span>
+                                </li>
                             </ul>
                         </div>
 
@@ -179,14 +184,13 @@
                                 <p>Announcement</p></div>
 
                         </div>
-
-                        <div class="announce-text">
-
+                        <div class="announce-text" >
                             <ul>
-                                <li><a href="twoStage/activity.html">加强组织建设 推动景区跨越发展以优异的...</a></li>
-                                <li><a href="twoStage/activity.html">加强组织建设 推动景区跨越发</a></li>
-                                <li><a href="twoStage/activity.html">加强组织建设</a></li>
-                                <li><a href="twoStage/activity.html">加强组织建设 推动景区跨越发</a></li>
+                                <li ng-repeat="each in jqgg">
+                                    <i class="scenic-i"></i>
+                                    <a href="threeLevel/activity.html?id={{each.id}}">{{each.title}}</a>
+                                    <span>{{each.uptime}}</span>
+                                </li>
                             </ul>
 
                         </div>
@@ -205,7 +209,6 @@
                             <p>scenic&nbsp;news</p></div>
 
                         <div class="title-li">
-
                             <ul>
                                 <li onmouseover="selectSwtich('',this,'reco-dh',0,'select')">雪山景区线路<i
                                         class="select-i-r"></i></li>
@@ -217,76 +220,25 @@
 
                     </div>
 
-                    <div class="recommend-text" id="reco-dh0" style="display:none">
-
-                        <dl>
-                            <dt><a href="twoStage/circuit.html"><img src="images/img-01.jpg"/></a></dt>
+                    <div class="recommend-text" id="reco-dh0" style="display:none" ng-controller="c">
+                        <dl ng-repeat="each in xsjqxl">
+                            <dt><a href="threeLevel/activity.html?id={{each.id}}"><img src="images/img-01.jpg"/></a></dt>
                             <dd>
-                                <span class="recommend-t"><a href="twoStage/circuit.html">1冰川地质公园游</a></span>
-                                <div class="recommend-txt">加强组织建设 推动景区跨越发展加强组织建设 推动景区跨越...</div>
-                            </dd>
-                        </dl>
-
-                        <dl>
-                            <dt><a href="twoStage/circuit.html"><img src="images/img-01.jpg"/></a></dt>
-                            <dd>
-                                <span class="recommend-t"><a href="twoStage/circuit.html">印象丽江灵魂之旅</a></span>
-                                <div class="recommend-txt">加强组织建设 推动景区跨越发展加强组织建设 推动景区跨越...</div>
-                            </dd>
-                        </dl>
-
-                        <dl>
-                            <dt><a href="twoStage/circuit.html"><img src="images/img-01.jpg"/></a></dt>
-                            <dd>
-                                <span class="recommend-t"><a href="twoStage/circuit.html">冰川地质公园游</a></span>
-                                <div class="recommend-txt">加强组织建设 推动景区跨越发展加强组织建设 推动景区跨越...</div>
-                            </dd>
-                        </dl>
-
-                        <dl>
-                            <dt><a href="twoStage/circuit.html"><img src="images/img-01.jpg"/></a></dt>
-                            <dd>
-                                <span class="recommend-t"><a href="twoStage/circuit.html">印象丽江灵魂之旅</a></span>
-                                <div class="recommend-txt">加强组织建设 推动景区跨越发展加强组织建设 推动景区跨越...</div>
+                                <span class="recommend-t"><a href="twoStage/circuit.html"> {{each.title}}</a></span>
+                                <div class="recommend-txt">{{each.brief}}</div>
                             </dd>
                         </dl>
 
                     </div>
 
-                    <div class="recommend-text" id="reco-dh1" style="display:block">
-
-                        <dl>
+                    <div class="recommend-text" id="reco-dh1" style="display:block" ng-controller="c">
+                        <dl ng-repeat="each in dylxl">
                             <dt><a href="twoStage/circuit.html"><img src="images/img-01.jpg"/></a></dt>
                             <dd>
-                                <span class="recommend-t"><a href="twoStage/circuit.html">2冰川地质公园游</a></span>
-                                <div class="recommend-txt">加强组织建设 推动景区跨越发展加强组织建设 推动景区跨越...</div>
+                                <span class="recommend-t"><a href="twoStage/circuit.html"> {{each.title}}</a></span>
+                                <div class="recommend-txt">{{each.brief}}</div>
                             </dd>
                         </dl>
-
-                        <dl>
-                            <dt><a href="twoStage/circuit.html"><img src="images/img-01.jpg"/></a></dt>
-                            <dd>
-                                <span class="recommend-t"><a href="twoStage/circuit.html">印象丽江灵魂之旅</a></span>
-                                <div class="recommend-txt">加强组织建设 推动景区跨越发展加强组织建设 推动景区跨越...</div>
-                            </dd>
-                        </dl>
-
-                        <dl>
-                            <dt><a href="twoStage/circuit.html"><img src="images/img-01.jpg"/></a></dt>
-                            <dd>
-                                <span class="recommend-t"><a href="twoStage/circuit.html">冰川地质公园游</a></span>
-                                <div class="recommend-txt">加强组织建设 推动景区跨越发展加强组织建设 推动景区跨越...</div>
-                            </dd>
-                        </dl>
-
-                        <dl>
-                            <dt><a href="twoStage/circuit.html"><img src="images/img-01.jpg"/></a></dt>
-                            <dd>
-                                <span class="recommend-t"><a href="twoStage/circuit.html">印象丽江灵魂之旅</a></span>
-                                <div class="recommend-txt">加强组织建设 推动景区跨越发展加强组织建设 推动景区跨越...</div>
-                            </dd>
-                        </dl>
-
                     </div>
 
                 </div>
@@ -433,23 +385,31 @@
 </body>
 </html>
 <script type="application/javascript">
-    angular.module('myApp', []).controller('景区新闻', function($scope,$http) {
+    angular.module('myApp', []).controller('c', function($scope,$http) {
         var url="http://localhost:8080/indexServlet/*";
-        var config = {params: {plate: '景区新闻'}};
         var postData = {text:'long blob of text'};
+        var config = {params: {plate: "景区新闻"}};
         $http.post(url, postData, config).success( function(json) {
             $scope.jqxw = json;
-            console.info(json);
         });
-    });
-    angular.module('myApp', []).controller('景区活动', function($scope,$http) {
-        var url="http://localhost:8080/indexServlet/*";
-        var config = {params: {plate: '景区活动'}};
-        var postData = {text:'long blob of text'};
+
+        var config = {params: {plate: "景区活动"}};
         $http.post(url, postData, config).success( function(json) {
-            $scope.jqxw = json;
-            console.info(json);
+            $scope.jqhd = json;
+        });
+        var config = {params: {plate: "景区公告"}};
+        $http.post(url, postData, config).success( function(json) {
+            $scope.jqgg = json;
+        });
+        var config = {params: {plate: "雪山景区线路"}};
+        $http.post(url, postData, config).success( function(json) {
+            $scope.xsjqxl = json;
+        });
+        var config = {params: {plate: "大玉龙线路"}};
+        $http.post(url, postData, config).success( function(json) {
+            $scope.dylxl = json;
         });
     });
+
 
 </script>
