@@ -18,7 +18,7 @@ import java.util.List;
  * 通过板块查询Article数据
  * Created by Administrator on 2016/9/26.
  */
-@WebServlet("/indexServlet/*")
+@WebServlet("/indexServlet")
 public class IndexServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

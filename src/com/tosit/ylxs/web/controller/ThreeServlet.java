@@ -15,7 +15,7 @@ import java.io.PrintWriter;
 /**
  * Created by Administrator on 2016/9/29.
  */
-@WebServlet("/threeLevel/activity")
+@WebServlet("/*/activityServlet")
 public class ThreeServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
