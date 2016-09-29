@@ -155,7 +155,7 @@
                             <ul>
                                 <li ng-repeat="each in jqxw">
                                     <i class="scenic-i"></i>
-                                    <a href="threeLevel/activity?id={{each.id}}">{{each.title}}</a>
+                                    <a href="threeLevel/activity.do?id={{each.id}}&&number=threeLevel">{{each.title}}</a>
                                     <span>{{each.uptime}}</span>
                                 </li>
                             </ul>
@@ -166,7 +166,7 @@
                             <ul>
                                 <li ng-repeat="each in jqhd">
                                     <i class="scenic-i"></i>
-                                    <a href="threeLevel/activity?id={{each.id}}">{{each.title}}</a>
+                                    <a href="threeLevel/activity.do?id={{each.id}}&&number=threeLevel">{{each.title}}</a>
                                     <span>{{each.uptime}}</span>
                                 </li>
                             </ul>
@@ -188,7 +188,7 @@
                             <ul>
                                 <li ng-repeat="each in jqgg">
                                     <i class="scenic-i"></i>
-                                    <a href="threeLevel/activity?id={{each.id}}">{{each.title}}</a>
+                                    <a href="threeLevel/activity.do?id={{each.id}}&&number=threeLevel">{{each.title}}</a>
                                     <span>{{each.uptime}}</span>
                                 </li>
                             </ul>
@@ -222,9 +222,9 @@
                     <!--雪山景区线路-->
                     <div class="recommend-text" id="reco-dh0" style="display:none" ng-controller="c">
                         <dl ng-repeat="each in xsjqxl">
-                            <dt><a href="threeLevel/activity?id={{each.id}}"><img src="images/img-01.jpg"/></a></dt>
+                            <dt><a href="threeLevel/activity.do?id={{each.id}}&&number=threeLevel"><img src="images/img-01.jpg"/></a></dt>
                             <dd>
-                                <span class="recommend-t"><a href="twoStage/activity"> {{each.title}}</a></span>
+                                <span class="recommend-t"><a href="twoStage/activity.do?id={{each.id}}&&number=threeLevel"> {{each.title}}</a></span>
                                 <div class="recommend-txt">{{each.brief}}</div>
                             </dd>
                         </dl>
@@ -233,9 +233,9 @@
                     <!--大玉龙线路-->
                     <div class="recommend-text" id="reco-dh1" style="display:block" ng-controller="c">
                         <dl ng-repeat="each in dylxl">
-                            <dt><a href="twoStage/activity?id={{each.id}}"><img src="images/img-01.jpg"/></a></dt>
+                            <dt><a href="twoStage/activity.do?id={{each.id}}&&number=twoStage"><img src="images/img-01.jpg"/></a></dt>
                             <dd>
-                                <span class="recommend-t"><a href="twoStage/activity"> {{each.title}}</a></span>
+                                <span class="recommend-t"><a href="twoStage/activity.do?id={{each.id}}&&number=twoStage"> {{each.title}}</a></span>
                                 <div class="recommend-txt">{{each.brief}}</div>
                             </dd>
                         </dl>
@@ -255,7 +255,7 @@
                         <span><img src="images/img-03.jpg"/></span>
                         <ul ng-controller="c">
                             <li ng-repeat="each in tjjd"><i class="recom-ico"><img src="images/ico-02.jpg"/></i><a
-                                    href="threeLevel/activity">{{each.title}}</a></li>
+                                    href="threeLevel/activity.do?id={{each.id}}&&number=threeLevel">{{each.title}}</a></li>
                             <!--<li><i class="recom-ico"><img src="images/ico-02.jpg"/></i><a-->
                                     <!--href="threeLevel/activity.html">雪山金茂酒店</a></li>  -->
                         </ul>
@@ -268,7 +268,7 @@
                         <span><img src="images/img-03.jpg"/></span>
                         <ul ng-controller="c">
                             <li ng-repeat="each in tjxsms"><i class="recom-ico"><img src="images/ico-02.jpg"/></i><a
-                                    href="threeLevel/activity.html">{{each.title}}</a></li>
+                                    href="threeLevel/activity.do?id={{each.id}}&&number=threeLevel">{{each.title}}</a></li>
                             <!--<li><i class="recom-ico"><img src="images/ico-02.jpg"/></i><a-->
                                     <!--href="threeLevel/activity.html">雪山金茂酒店</a></li>-->
                         </ul>
