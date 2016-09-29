@@ -12,23 +12,21 @@ import java.io.IOException;
 import java.io.PrintWriter;
 
 /**
- * index下级页面请求
- * 通过id查询数据
+ * 转发器
+ * 把id写入session
  * Created by Administrator on 2016/9/26.
  */
-@WebServlet("/index/next/*")
+@WebServlet("/threeLevel/activity/*")
 public class IndexNextServlet extends HttpServlet{
     @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         PrintWriter out=resp.getWriter();
 //        通过id查询Article数据
         int id = Integer.parseInt(req.getParameter("id"));
-        Gson gson =new Gson();
-        Article article;
-        String jsonObject=gson.toJson("article");
-//        发送给前端
-        out.print(jsonObject);
-        out.flush();
+//        把id如session
+        req.getSession().setAttribute("id",id);
+        resp.sendRedirect("http://localhost:8080/threelevel/activity.html");
+        System.out.println(req.getSession().getAttribute("id"));
     }
 
 }
