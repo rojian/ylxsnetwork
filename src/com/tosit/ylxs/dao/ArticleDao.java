@@ -50,7 +50,11 @@ public class ArticleDao implements ImplementArticleDao {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-
+        try {
+            conn.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
         return article;
     }
 
@@ -86,6 +90,11 @@ public class ArticleDao implements ImplementArticleDao {
             e.printStackTrace();
         }
 
+        try {
+            conn.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
         return articles;
     }
 

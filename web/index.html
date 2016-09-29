@@ -155,7 +155,7 @@
                             <ul>
                                 <li ng-repeat="each in jqxw">
                                     <i class="scenic-i"></i>
-                                    <a href="threeLevel/activity.html?id={{each.id}}">{{each.title}}</a>
+                                    <a href="threeLevel/activity?id={{each.id}}">{{each.title}}</a>
                                     <span>{{each.uptime}}</span>
                                 </li>
                             </ul>
@@ -166,7 +166,7 @@
                             <ul>
                                 <li ng-repeat="each in jqhd">
                                     <i class="scenic-i"></i>
-                                    <a href="threeLevel/activity.html?id={{each.id}}">{{each.title}}</a>
+                                    <a href="threeLevel/activity?id={{each.id}}">{{each.title}}</a>
                                     <span>{{each.uptime}}</span>
                                 </li>
                             </ul>
@@ -188,7 +188,7 @@
                             <ul>
                                 <li ng-repeat="each in jqgg">
                                     <i class="scenic-i"></i>
-                                    <a href="threeLevel/activity.html?id={{each.id}}">{{each.title}}</a>
+                                    <a href="threeLevel/activity?id={{each.id}}">{{each.title}}</a>
                                     <span>{{each.uptime}}</span>
                                 </li>
                             </ul>
@@ -219,23 +219,23 @@
                         </div>
 
                     </div>
-
+                    <!--雪山景区线路-->
                     <div class="recommend-text" id="reco-dh0" style="display:none" ng-controller="c">
                         <dl ng-repeat="each in xsjqxl">
-                            <dt><a href="threeLevel/activity.html?id={{each.id}}"><img src="images/img-01.jpg"/></a></dt>
+                            <dt><a href="threeLevel/activity?id={{each.id}}"><img src="images/img-01.jpg"/></a></dt>
                             <dd>
-                                <span class="recommend-t"><a href="twoStage/circuit.html"> {{each.title}}</a></span>
+                                <span class="recommend-t"><a href="twoStage/activity"> {{each.title}}</a></span>
                                 <div class="recommend-txt">{{each.brief}}</div>
                             </dd>
                         </dl>
 
                     </div>
-
+                    <!--大玉龙线路-->
                     <div class="recommend-text" id="reco-dh1" style="display:block" ng-controller="c">
                         <dl ng-repeat="each in dylxl">
-                            <dt><a href="twoStage/circuit.html"><img src="images/img-01.jpg"/></a></dt>
+                            <dt><a href="twoStage/activity?id={{each.id}}"><img src="images/img-01.jpg"/></a></dt>
                             <dd>
-                                <span class="recommend-t"><a href="twoStage/circuit.html"> {{each.title}}</a></span>
+                                <span class="recommend-t"><a href="twoStage/activity"> {{each.title}}</a></span>
                                 <div class="recommend-txt">{{each.brief}}</div>
                             </dd>
                         </dl>
@@ -253,11 +253,11 @@
                     <div class="recom-title"><a href="javascript:">推荐酒店</a></div>
                     <div class="recom-text">
                         <span><img src="images/img-03.jpg"/></span>
-                        <ul>
-                            <li><i class="recom-ico"><img src="images/ico-02.jpg"/></i><a
-                                    href="threeLevel/activity.html">和府皇冠假日酒店</a></li>
-                            <li><i class="recom-ico"><img src="images/ico-02.jpg"/></i><a
-                                    href="threeLevel/activity.html">雪山金茂酒店</a></li>
+                        <ul ng-controller="c">
+                            <li ng-repeat="each in tjjd"><i class="recom-ico"><img src="images/ico-02.jpg"/></i><a
+                                    href="threeLevel/activity">{{each.title}}</a></li>
+                            <!--<li><i class="recom-ico"><img src="images/ico-02.jpg"/></i><a-->
+                                    <!--href="threeLevel/activity.html">雪山金茂酒店</a></li>  -->
                         </ul>
                     </div>
                 </div>
@@ -266,11 +266,11 @@
                     <div class="recom-title"><a href="javascript:">推荐雪山美食</a></div>
                     <div class="recom-text">
                         <span><img src="images/img-03.jpg"/></span>
-                        <ul>
-                            <li><i class="recom-ico"><img src="images/ico-02.jpg"/></i><a
-                                    href="threeLevel/activity.html">玉龙雪山餐饮中心（雪厨房）</a></li>
-                            <li><i class="recom-ico"><img src="images/ico-02.jpg"/></i><a
-                                    href="threeLevel/activity.html">雪山金茂酒店</a></li>
+                        <ul ng-controller="c">
+                            <li ng-repeat="each in tjxsms"><i class="recom-ico"><img src="images/ico-02.jpg"/></i><a
+                                    href="threeLevel/activity.html">{{each.title}}</a></li>
+                            <!--<li><i class="recom-ico"><img src="images/ico-02.jpg"/></i><a-->
+                                    <!--href="threeLevel/activity.html">雪山金茂酒店</a></li>-->
                         </ul>
                     </div>
                 </div>
@@ -386,7 +386,7 @@
 </html>
 <script type="application/javascript">
     angular.module('myApp', []).controller('c', function($scope,$http) {
-        var url="http://localhost:8080/indexServlet/*";
+        var url="http://localhost:8080/indexServlet";
         var postData = {text:'long blob of text'};
         var config = {params: {plate: "景区新闻"}};
         $http.post(url, postData, config).success( function(json) {
@@ -405,7 +405,18 @@
         $http.post(url, postData, config).success( function(json) {
             $scope.xsjqxl = json;
         });
-
+        var config = {params: {plate: "大玉龙线路"}};
+        $http.post(url, postData, config).success( function(json) {
+            $scope.dylxl = json;
+        });
+        var config = {params: {plate: "推荐酒店"}};
+        $http.post(url, postData, config).success( function(json) {
+            $scope.tjjd = json;
+        });
+        var config = {params: {plate: "推荐雪山美食"}};
+        $http.post(url, postData, config).success( function(json) {
+            $scope.tjxsms = json;
+        });
     });
 
 
