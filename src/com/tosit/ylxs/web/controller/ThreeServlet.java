@@ -13,6 +13,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 
 /**
+ * 2,3级页面请求
  * Created by Administrator on 2016/9/29.
  */
 @WebServlet("/*/activityServlet")
