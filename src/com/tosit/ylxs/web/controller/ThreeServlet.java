@@ -16,7 +16,7 @@ import java.io.PrintWriter;
  * 2,3级页面请求
  * Created by Administrator on 2016/9/29.
  */
-@WebServlet("/*/activityServlet")
+@WebServlet("*.po")
 public class ThreeServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

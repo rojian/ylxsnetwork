@@ -212,7 +212,7 @@
 </html>
 <script type="application/javascript">
     angular.module('myApp', []).controller('namecotroll', function($scope,$http) {
-        var url="http://localhost:8080/threeLevel/activityServlet";
+        var url="http://localhost:8080/threeLevel/activityServlet.po";
 
         $http.get(url).success( function(json) {
             $scope.plate = json;
