@@ -26,11 +26,11 @@ public class IndexServlet extends HttpServlet {
 
         PrintWriter out =resp.getWriter();
         String plate=req.getParameter("plate");
-        System.out.println(plate);
+//        System.out.println(plate);
         Gson gson=new Gson();
         ArticleDao articleDao=new ArticleDao();
         List<Article> articles=articleDao.selectArticleByPlate(plate);
-        System.out.println(articles.get(1).getUptime());
+//        System.out.println(articles.get(1).getUptime());
         String jsonObjects=gson.toJson(articles);
         out.write(jsonObjects);
     }
