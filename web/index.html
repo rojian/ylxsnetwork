@@ -155,7 +155,7 @@
                             <ul>
                                 <li ng-repeat="each in jqxw">
                                     <i class="scenic-i"></i>
-                                    <a href="threeLevel/activity.html?id={{each.id}}">{{each.title}}</a>
+                                    <a href="threeLevel/activity?id={{each.id}}">{{each.title}}</a>
                                     <span>{{each.uptime}}</span>
                                 </li>
                             </ul>
@@ -166,7 +166,7 @@
                             <ul>
                                 <li ng-repeat="each in jqhd">
                                     <i class="scenic-i"></i>
-                                    <a href="threeLevel/activity.html?id={{each.id}}">{{each.title}}</a>
+                                    <a href="threeLevel/activity?id={{each.id}}">{{each.title}}</a>
                                     <span>{{each.uptime}}</span>
                                 </li>
                             </ul>
@@ -188,7 +188,7 @@
                             <ul>
                                 <li ng-repeat="each in jqgg">
                                     <i class="scenic-i"></i>
-                                    <a href="threeLevel/activity.html?id={{each.id}}">{{each.title}}</a>
+                                    <a href="threeLevel/activity?id={{each.id}}">{{each.title}}</a>
                                     <span>{{each.uptime}}</span>
                                 </li>
                             </ul>
@@ -219,10 +219,10 @@
                         </div>
 
                     </div>
-
+                    <!--雪山景区线路-->
                     <div class="recommend-text" id="reco-dh0" style="display:none" ng-controller="c">
                         <dl ng-repeat="each in xsjqxl">
-                            <dt><a href="threeLevel/activity.html?id={{each.id}}"><img src="images/img-01.jpg"/></a></dt>
+                            <dt><a href="threeLevel/activity?id={{each.id}}"><img src="images/img-01.jpg"/></a></dt>
                             <dd>
                                 <span class="recommend-t"><a href="twoStage/circuit.html"> {{each.title}}</a></span>
                                 <div class="recommend-txt">{{each.brief}}</div>
@@ -230,10 +230,10 @@
                         </dl>
 
                     </div>
-
+                    <!--大玉龙线路-->
                     <div class="recommend-text" id="reco-dh1" style="display:block" ng-controller="c">
                         <dl ng-repeat="each in dylxl">
-                            <dt><a href="twoStage/circuit.html"><img src="images/img-01.jpg"/></a></dt>
+                            <dt><a href="twoStage/circuit"><img src="images/img-01.jpg"/></a></dt>
                             <dd>
                                 <span class="recommend-t"><a href="twoStage/circuit.html"> {{each.title}}</a></span>
                                 <div class="recommend-txt">{{each.brief}}</div>
@@ -405,7 +405,10 @@
         $http.post(url, postData, config).success( function(json) {
             $scope.xsjqxl = json;
         });
-
+        var config = {params: {plate: "大玉龙线路"}};
+        $http.post(url, postData, config).success( function(json) {
+            $scope.dylxl = json;
+        });
     });
 
 
