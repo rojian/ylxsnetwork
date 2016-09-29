@@ -11,7 +11,7 @@ import java.io.IOException;
 /**
  * Created by Administrator on 2016/9/27.
  */
-@WebFilter("/indexServlet/*")
+@WebFilter("/*")
 public class Myfilter implements javax.servlet.Filter {
     @Override
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
