@@ -18,7 +18,7 @@ public class ArticleDao implements ImplementArticleDao {
             e.printStackTrace();
         }
     }
-    public static final String URL = "jdbc:mysql://192.168.1.119:3306/ylxsnetword";
+    public static final String URL = "jdbc:mysql://192.168.1.103:3306/ylxsnetword";
     public static final String USER = "root";
     public static final String PASSWORD = "root";
 
