@@ -17,7 +17,7 @@ import java.io.PrintWriter;
  * Created by Administrator on 2016/9/26.
  */
 @WebServlet("/threeLevel/activity")
-public class IndexNextServlet extends HttpServlet{
+public class IndextwotServlet extends HttpServlet{
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         PrintWriter out=resp.getWriter();
