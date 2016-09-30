@@ -1,4 +1,4 @@
-package com.tosit.ylxs.web.controller;
+package com.tosit.ylxs.web.controller.reception;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

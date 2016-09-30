@@ -1,4 +1,4 @@
-package com.tosit.ylxs.web.controller;
+package com.tosit.ylxs.web.controller.reception;
 
 import com.google.gson.Gson;
 import com.tosit.ylxs.dao.ShoppingDao;
