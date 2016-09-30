@@ -15,7 +15,7 @@
 	   <h2>管理帐户添加：</h2>
 	 </div>
 	 <div class="main">
-          <form target="" action="" name="" class="addresser">
+          <form target="" action="addduserServlet" method="post" name="" class="addresser">
 			<div class="changepwd">	
 			<div class="con_tb">
 				<ul class="p1">
@@ -24,9 +24,9 @@
 				<li style="border:none">请确认密码：</li>
 				</ul>
 				<ul class="p2">
-				<li class="top_b"><input type="text"  class="opwd"/><div class="msg" ></div></li>
-				<li><input type="password"  class="opwd"/><div class="msg" ></div></li>
-				<li class="nobor"><input type="password" class="opwd"/><div class="msg" ></div></li>
+				<li class="top_b"><input type="text"  name="usernameadd" class="opwd"/><div class="msg" ></div></li>
+				<li><input type="password"  name="passwordadd" class="opwd"/><div class="msg" ></div></li>
+				<li class="nobor"><input type="password" name="repasswordadd" class="opwd"/><div class="msg" ></div></li>
 				</ul>
 								<ul class="mbtn">
 				<button type="submit">确定提交</button>

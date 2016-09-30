@@ -39,6 +39,7 @@ public class ArticleDao implements ImplementArticleDao {
                 String content = result.getString("content");
                 String path = result.getString("path");
                 String uptime = result.getDate("uptime").toString();
+                String classification=result.getString("classification");
 
                 article.setId(id);
                 article.setTitle(title);
@@ -46,6 +47,7 @@ public class ArticleDao implements ImplementArticleDao {
                 article.setContent(content);
                 article.setPath(path);
                 article.setUptime(uptime);
+                article.setClassification(classification);
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -76,6 +78,7 @@ public class ArticleDao implements ImplementArticleDao {
                 String content = result.getString("content");
                 String path = result.getString("path");
                 String uptime = result.getDate("uptime").toString();
+                String classification=result.getString("classification");
                 Article article = new Article();
                 article.setId(id);
                 article.setTitle(title);
@@ -84,6 +87,7 @@ public class ArticleDao implements ImplementArticleDao {
                 article.setPath(path);
                 article.setUptime(uptime);
                 articles.add(article);
+                article.setClassification(classification);
                 i++;
             }
         } catch (SQLException e) {

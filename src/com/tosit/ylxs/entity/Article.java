@@ -14,6 +14,15 @@ public class Article {
     private String content; //详细内容
     private String path; //图片路径
     private String uptime; //上传时间
+    private String classification; //分类
+
+    public String getClassification() {
+        return classification;
+    }
+
+    public void setClassification(String classification) {
+        this.classification = classification;
+    }
 
     public int getId() {
         return id;
