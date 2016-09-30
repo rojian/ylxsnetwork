@@ -18,4 +18,11 @@ public interface ImplementShoppingDao {
      * @return Article对象集合
      */
 public List<Shopping> selectShoppingAllshop();
+
+    /**
+     * 添加商品
+     * @param shopping
+     * @return
+     */
+    public boolean addShopping(Shopping shopping);
 }

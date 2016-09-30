@@ -75,6 +75,13 @@ public class ShoppingDao implements ImplementShoppingDao {
         return shoppingList;
     }
 
+    @Override
+    public boolean addShopping(Shopping shopping) {
+        boolean isOk=false;
+
+        return  isOk;
+    }
+
     public static void main(String[] args){
         ShoppingDao shoppingDao = new ShoppingDao();
         List<Shopping> shopping = shoppingDao.selectShoppingAllshop();

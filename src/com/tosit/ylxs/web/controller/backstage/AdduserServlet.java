@@ -1,5 +1,6 @@
-package com.tosit.ylxs.dao;
+package com.tosit.ylxs.web.controller.backstage;
 
+import com.tosit.ylxs.dao.UserDao;
 import com.tosit.ylxs.entity.User;
 
 import javax.servlet.ServletException;
