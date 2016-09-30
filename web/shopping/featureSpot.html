@@ -6,9 +6,10 @@
 <link rel="stylesheet" type="text/css" href="../css/css.css"/>
 <script type="text/javascript" src="../js/jquery-1.8.3.min.js"></script>
 <script type="text/javascript" src="../js/room-flash.js"></script>
+    <script type="application/javascript" src="../js/angular.min.js"></script>
 </head>
 
-<body>
+<body  ng-app="myApp" ng-controller="namecotroll">
 
     <!--top flash begin-->
     <div class="YL-home-spot">
@@ -68,186 +69,186 @@
                        
                        <div class="feature-list">
                          <ul>
-                           <li>
+                           <li ng-repeat="each in plate" >
                                <a href="javascript:" class="feature-img"><img src="../images/img-31.jpg"/></a>
                                <div class="feature-div">
-                                  <h2 class="feature-t"><a href="javascript:">大玉龙雪山景区联票</a></h2>
-                                  <span>甘海子位于玉龙雪山东麓,原为高山海子”,这里是纵览玉龙雪山全最佳</span>
+                                  <h2 class="feature-t"><a href="javascript:">{{each.plateId}}</a></h2>
+                                  <span>{{each.story}}</span>
                                </div>
                                <div class="feature-btn">
-                                 <span>￥315</span>
+                                 <span>{{each.price}}</span>
                                  <a href="javascript:" class="feature-r">加入<br/>购物车</a>
                                  <a href="javascript:" class="feature-l">立即<br/>购买</a>
                                </div>
                            </li>
-                           <li>
-                               <a href="javascript:" class="feature-img"><img src="../images/img-31.jpg"/></a>
-                               <div class="feature-div">
-                                  <h2 class="feature-t"><a href="javascript:">大玉龙雪山景区联票</a></h2>
-                                  <span>甘海子位于玉龙雪山东麓,原为高山海子”,这里是纵览玉龙雪山全最佳</span>
-                               </div>
-                               <div class="feature-btn">
-                                 <span>￥315</span>
-                                 <a href="javascript:" class="feature-r">加入<br/>购物车</a>
-                                 <a href="javascript:" class="feature-l">立即<br/>购买</a>
-                               </div>
-                           </li>
-                           <li>
-                               <a href="javascript:" class="feature-img"><img src="../images/img-31.jpg"/></a>
-                               <div class="feature-div">
-                                  <h2 class="feature-t"><a href="javascript:">大玉龙雪山景区联票</a></h2>
-                                  <span>甘海子位于玉龙雪山东麓,原为高山海子”,这里是纵览玉龙雪山全最佳</span>
-                               </div>
-                               <div class="feature-btn">
-                                 <span>￥315</span>
-                                 <a href="javascript:" class="feature-r">加入<br/>购物车</a>
-                                 <a href="javascript:" class="feature-l">立即<br/>购买</a>
-                               </div>
-                           </li>
-                           <li>
-                               <a href="javascript:" class="feature-img"><img src="../images/img-31.jpg"/></a>
-                               <div class="feature-div">
-                                  <h2 class="feature-t"><a href="javascript:">大玉龙雪山景区联票</a></h2>
-                                  <span>甘海子位于玉龙雪山东麓,原为高山海子”,这里是纵览玉龙雪山全最佳</span>
-                               </div>
-                               <div class="feature-btn">
-                                 <span>￥315</span>
-                                 <a href="javascript:" class="feature-r">加入<br/>购物车</a>
-                                 <a href="javascript:" class="feature-l">立即<br/>购买</a>
-                               </div>
-                           </li>
-                           <li>
-                               <a href="javascript:" class="feature-img"><img src="../images/img-31.jpg"/></a>
-                               <div class="feature-div">
-                                  <h2 class="feature-t"><a href="javascript:">大玉龙雪山景区联票</a></h2>
-                                  <span>甘海子位于玉龙雪山东麓,原为高山海子”,这里是纵览玉龙雪山全最佳</span>
-                               </div>
-                               <div class="feature-btn">
-                                 <span>￥315</span>
-                                 <a href="javascript:" class="feature-r">加入<br/>购物车</a>
-                                 <a href="javascript:" class="feature-l">立即<br/>购买</a>
-                               </div>
-                           </li>
-                           <li>
-                               <a href="javascript:" class="feature-img"><img src="../images/img-31.jpg"/></a>
-                               <div class="feature-div">
-                                  <h2 class="feature-t"><a href="javascript:">大玉龙雪山景区联票</a></h2>
-                                  <span>甘海子位于玉龙雪山东麓,原为高山海子”,这里是纵览玉龙雪山全最佳</span>
-                               </div>
-                               <div class="feature-btn">
-                                 <span>￥315</span>
-                                 <a href="javascript:" class="feature-r">加入<br/>购物车</a>
-                                 <a href="javascript:" class="feature-l">立即<br/>购买</a>
-                               </div>
-                           </li>
-                           <li>
-                               <a href="javascript:" class="feature-img"><img src="../images/img-31.jpg"/></a>
-                               <div class="feature-div">
-                                  <h2 class="feature-t"><a href="javascript:">大玉龙雪山景区联票</a></h2>
-                                  <span>甘海子位于玉龙雪山东麓,原为高山海子”,这里是纵览玉龙雪山全最佳</span>
-                               </div>
-                               <div class="feature-btn">
-                                 <span>￥315</span>
-                                 <a href="javascript:" class="feature-r">加入<br/>购物车</a>
-                                 <a href="javascript:" class="feature-l">立即<br/>购买</a>
-                               </div>
-                           </li>
-                           <li>
-                               <a href="javascript:" class="feature-img"><img src="../images/img-31.jpg"/></a>
-                               <div class="feature-div">
-                                  <h2 class="feature-t"><a href="javascript:">大玉龙雪山景区联票</a></h2>
-                                  <span>甘海子位于玉龙雪山东麓,原为高山海子”,这里是纵览玉龙雪山全最佳</span>
-                               </div>
-                               <div class="feature-btn">
-                                 <span>￥315</span>
-                                 <a href="javascript:" class="feature-r">加入<br/>购物车</a>
-                                 <a href="javascript:" class="feature-l">立即<br/>购买</a>
-                               </div>
-                           </li>
-                           <li>
-                               <a href="javascript:" class="feature-img"><img src="../images/img-31.jpg"/></a>
-                               <div class="feature-div">
-                                  <h2 class="feature-t"><a href="javascript:">大玉龙雪山景区联票</a></h2>
-                                  <span>甘海子位于玉龙雪山东麓,原为高山海子”,这里是纵览玉龙雪山全最佳</span>
-                               </div>
-                               <div class="feature-btn">
-                                 <span>￥315</span>
-                                 <a href="javascript:" class="feature-r">加入<br/>购物车</a>
-                                 <a href="javascript:" class="feature-l">立即<br/>购买</a>
-                               </div>
-                           </li>
-                           <li>
-                               <a href="javascript:" class="feature-img"><img src="../images/img-31.jpg"/></a>
-                               <div class="feature-div">
-                                  <h2 class="feature-t"><a href="javascript:">大玉龙雪山景区联票</a></h2>
-                                  <span>甘海子位于玉龙雪山东麓,原为高山海子”,这里是纵览玉龙雪山全最佳</span>
-                               </div>
-                               <div class="feature-btn">
-                                 <span>￥315</span>
-                                 <a href="javascript:" class="feature-r">加入<br/>购物车</a>
-                                 <a href="javascript:" class="feature-l">立即<br/>购买</a>
-                               </div>
-                           </li>
-                           <li>
-                               <a href="javascript:" class="feature-img"><img src="../images/img-31.jpg"/></a>
-                               <div class="feature-div">
-                                  <h2 class="feature-t"><a href="javascript:">大玉龙雪山景区联票</a></h2>
-                                  <span>甘海子位于玉龙雪山东麓,原为高山海子”,这里是纵览玉龙雪山全最佳</span>
-                               </div>
-                               <div class="feature-btn">
-                                 <span>￥315</span>
-                                 <a href="javascript:" class="feature-r">加入<br/>购物车</a>
-                                 <a href="javascript:" class="feature-l">立即<br/>购买</a>
-                               </div>
-                           </li>
-                           <li>
-                               <a href="javascript:" class="feature-img"><img src="../images/img-31.jpg"/></a>
-                               <div class="feature-div">
-                                  <h2 class="feature-t"><a href="javascript:">大玉龙雪山景区联票</a></h2>
-                                  <span>甘海子位于玉龙雪山东麓,原为高山海子”,这里是纵览玉龙雪山全最佳</span>
-                               </div>
-                               <div class="feature-btn">
-                                 <span>￥315</span>
-                                 <a href="javascript:" class="feature-r">加入<br/>购物车</a>
-                                 <a href="javascript:" class="feature-l">立即<br/>购买</a>
-                               </div>
-                           </li>
-                           <li>
-                               <a href="javascript:" class="feature-img"><img src="../images/img-31.jpg"/></a>
-                               <div class="feature-div">
-                                  <h2 class="feature-t"><a href="javascript:">大玉龙雪山景区联票</a></h2>
-                                  <span>甘海子位于玉龙雪山东麓,原为高山海子”,这里是纵览玉龙雪山全最佳</span>
-                               </div>
-                               <div class="feature-btn">
-                                 <span>￥315</span>
-                                 <a href="javascript:" class="feature-r">加入<br/>购物车</a>
-                                 <a href="javascript:" class="feature-l">立即<br/>购买</a>
-                               </div>
-                           </li>
-                           <li>
-                               <a href="javascript:" class="feature-img"><img src="../images/img-31.jpg"/></a>
-                               <div class="feature-div">
-                                  <h2 class="feature-t"><a href="javascript:">大玉龙雪山景区联票</a></h2>
-                                  <span>甘海子位于玉龙雪山东麓,原为高山海子”,这里是纵览玉龙雪山全最佳</span>
-                               </div>
-                               <div class="feature-btn">
-                                 <span>￥315</span>
-                                 <a href="javascript:" class="feature-r">加入<br/>购物车</a>
-                                 <a href="javascript:" class="feature-l">立即<br/>购买</a>
-                               </div>
-                           </li>
-                           <li>
-                               <a href="javascript:" class="feature-img"><img src="../images/img-31.jpg"/></a>
-                               <div class="feature-div">
-                                  <h2 class="feature-t"><a href="javascript:">大玉龙雪山景区联票</a></h2>
-                                  <span>甘海子位于玉龙雪山东麓,原为高山海子”,这里是纵览玉龙雪山全最佳</span>
-                               </div>
-                               <div class="feature-btn">
-                                 <span>￥315</span>
-                                 <a href="javascript:" class="feature-r">加入<br/>购物车</a>
-                                 <a href="javascript:" class="feature-l">立即<br/>购买</a>
-                               </div>
-                           </li>
+                           <!--<li>-->
+                               <!--<a href="javascript:" class="feature-img"><img src="../images/img-31.jpg"/></a>-->
+                               <!--<div class="feature-div">-->
+                                  <!--<h2 class="feature-t"><a href="javascript:">大玉龙雪山景区联票</a></h2>-->
+                                  <!--<span>甘海子位于玉龙雪山东麓,原为高山海子”,这里是纵览玉龙雪山全最佳</span>-->
+                               <!--</div>-->
+                               <!--<div class="feature-btn">-->
+                                 <!--<span>￥315</span>-->
+                                 <!--<a href="javascript:" class="feature-r">加入<br/>购物车</a>-->
+                                 <!--<a href="javascript:" class="feature-l">立即<br/>购买</a>-->
+                               <!--</div>-->
+                           <!--</li>-->
+                           <!--<li>-->
+                               <!--<a href="javascript:" class="feature-img"><img src="../images/img-31.jpg"/></a>-->
+                               <!--<div class="feature-div">-->
+                                  <!--<h2 class="feature-t"><a href="javascript:">大玉龙雪山景区联票</a></h2>-->
+                                  <!--<span>甘海子位于玉龙雪山东麓,原为高山海子”,这里是纵览玉龙雪山全最佳</span>-->
+                               <!--</div>-->
+                               <!--<div class="feature-btn">-->
+                                 <!--<span>￥315</span>-->
+                                 <!--<a href="javascript:" class="feature-r">加入<br/>购物车</a>-->
+                                 <!--<a href="javascript:" class="feature-l">立即<br/>购买</a>-->
+                               <!--</div>-->
+                           <!--</li>-->
+                           <!--<li>-->
+                               <!--<a href="javascript:" class="feature-img"><img src="../images/img-31.jpg"/></a>-->
+                               <!--<div class="feature-div">-->
+                                  <!--<h2 class="feature-t"><a href="javascript:">大玉龙雪山景区联票</a></h2>-->
+                                  <!--<span>甘海子位于玉龙雪山东麓,原为高山海子”,这里是纵览玉龙雪山全最佳</span>-->
+                               <!--</div>-->
+                               <!--<div class="feature-btn">-->
+                                 <!--<span>￥315</span>-->
+                                 <!--<a href="javascript:" class="feature-r">加入<br/>购物车</a>-->
+                                 <!--<a href="javascript:" class="feature-l">立即<br/>购买</a>-->
+                               <!--</div>-->
+                           <!--</li>-->
+                           <!--<li>-->
+                               <!--<a href="javascript:" class="feature-img"><img src="../images/img-31.jpg"/></a>-->
+                               <!--<div class="feature-div">-->
+                                  <!--<h2 class="feature-t"><a href="javascript:">大玉龙雪山景区联票</a></h2>-->
+                                  <!--<span>甘海子位于玉龙雪山东麓,原为高山海子”,这里是纵览玉龙雪山全最佳</span>-->
+                               <!--</div>-->
+                               <!--<div class="feature-btn">-->
+                                 <!--<span>￥315</span>-->
+                                 <!--<a href="javascript:" class="feature-r">加入<br/>购物车</a>-->
+                                 <!--<a href="javascript:" class="feature-l">立即<br/>购买</a>-->
+                               <!--</div>-->
+                           <!--</li>-->
+                           <!--<li>-->
+                               <!--<a href="javascript:" class="feature-img"><img src="../images/img-31.jpg"/></a>-->
+                               <!--<div class="feature-div">-->
+                                  <!--<h2 class="feature-t"><a href="javascript:">大玉龙雪山景区联票</a></h2>-->
+                                  <!--<span>甘海子位于玉龙雪山东麓,原为高山海子”,这里是纵览玉龙雪山全最佳</span>-->
+                               <!--</div>-->
+                               <!--<div class="feature-btn">-->
+                                 <!--<span>￥315</span>-->
+                                 <!--<a href="javascript:" class="feature-r">加入<br/>购物车</a>-->
+                                 <!--<a href="javascript:" class="feature-l">立即<br/>购买</a>-->
+                               <!--</div>-->
+                           <!--</li>-->
+                           <!--<li>-->
+                               <!--<a href="javascript:" class="feature-img"><img src="../images/img-31.jpg"/></a>-->
+                               <!--<div class="feature-div">-->
+                                  <!--<h2 class="feature-t"><a href="javascript:">大玉龙雪山景区联票</a></h2>-->
+                                  <!--<span>甘海子位于玉龙雪山东麓,原为高山海子”,这里是纵览玉龙雪山全最佳</span>-->
+                               <!--</div>-->
+                               <!--<div class="feature-btn">-->
+                                 <!--<span>￥315</span>-->
+                                 <!--<a href="javascript:" class="feature-r">加入<br/>购物车</a>-->
+                                 <!--<a href="javascript:" class="feature-l">立即<br/>购买</a>-->
+                               <!--</div>-->
+                           <!--</li>-->
+                           <!--<li>-->
+                               <!--<a href="javascript:" class="feature-img"><img src="../images/img-31.jpg"/></a>-->
+                               <!--<div class="feature-div">-->
+                                  <!--<h2 class="feature-t"><a href="javascript:">大玉龙雪山景区联票</a></h2>-->
+                                  <!--<span>甘海子位于玉龙雪山东麓,原为高山海子”,这里是纵览玉龙雪山全最佳</span>-->
+                               <!--</div>-->
+                               <!--<div class="feature-btn">-->
+                                 <!--<span>￥315</span>-->
+                                 <!--<a href="javascript:" class="feature-r">加入<br/>购物车</a>-->
+                                 <!--<a href="javascript:" class="feature-l">立即<br/>购买</a>-->
+                               <!--</div>-->
+                           <!--</li>-->
+                           <!--<li>-->
+                               <!--<a href="javascript:" class="feature-img"><img src="../images/img-31.jpg"/></a>-->
+                               <!--<div class="feature-div">-->
+                                  <!--<h2 class="feature-t"><a href="javascript:">大玉龙雪山景区联票</a></h2>-->
+                                  <!--<span>甘海子位于玉龙雪山东麓,原为高山海子”,这里是纵览玉龙雪山全最佳</span>-->
+                               <!--</div>-->
+                               <!--<div class="feature-btn">-->
+                                 <!--<span>￥315</span>-->
+                                 <!--<a href="javascript:" class="feature-r">加入<br/>购物车</a>-->
+                                 <!--<a href="javascript:" class="feature-l">立即<br/>购买</a>-->
+                               <!--</div>-->
+                           <!--</li>-->
+                           <!--<li>-->
+                               <!--<a href="javascript:" class="feature-img"><img src="../images/img-31.jpg"/></a>-->
+                               <!--<div class="feature-div">-->
+                                  <!--<h2 class="feature-t"><a href="javascript:">大玉龙雪山景区联票</a></h2>-->
+                                  <!--<span>甘海子位于玉龙雪山东麓,原为高山海子”,这里是纵览玉龙雪山全最佳</span>-->
+                               <!--</div>-->
+                               <!--<div class="feature-btn">-->
+                                 <!--<span>￥315</span>-->
+                                 <!--<a href="javascript:" class="feature-r">加入<br/>购物车</a>-->
+                                 <!--<a href="javascript:" class="feature-l">立即<br/>购买</a>-->
+                               <!--</div>-->
+                           <!--</li>-->
+                           <!--<li>-->
+                               <!--<a href="javascript:" class="feature-img"><img src="../images/img-31.jpg"/></a>-->
+                               <!--<div class="feature-div">-->
+                                  <!--<h2 class="feature-t"><a href="javascript:">大玉龙雪山景区联票</a></h2>-->
+                                  <!--<span>甘海子位于玉龙雪山东麓,原为高山海子”,这里是纵览玉龙雪山全最佳</span>-->
+                               <!--</div>-->
+                               <!--<div class="feature-btn">-->
+                                 <!--<span>￥315</span>-->
+                                 <!--<a href="javascript:" class="feature-r">加入<br/>购物车</a>-->
+                                 <!--<a href="javascript:" class="feature-l">立即<br/>购买</a>-->
+                               <!--</div>-->
+                           <!--</li>-->
+                           <!--<li>-->
+                               <!--<a href="javascript:" class="feature-img"><img src="../images/img-31.jpg"/></a>-->
+                               <!--<div class="feature-div">-->
+                                  <!--<h2 class="feature-t"><a href="javascript:">大玉龙雪山景区联票</a></h2>-->
+                                  <!--<span>甘海子位于玉龙雪山东麓,原为高山海子”,这里是纵览玉龙雪山全最佳</span>-->
+                               <!--</div>-->
+                               <!--<div class="feature-btn">-->
+                                 <!--<span>￥315</span>-->
+                                 <!--<a href="javascript:" class="feature-r">加入<br/>购物车</a>-->
+                                 <!--<a href="javascript:" class="feature-l">立即<br/>购买</a>-->
+                               <!--</div>-->
+                           <!--</li>-->
+                           <!--<li>-->
+                               <!--<a href="javascript:" class="feature-img"><img src="../images/img-31.jpg"/></a>-->
+                               <!--<div class="feature-div">-->
+                                  <!--<h2 class="feature-t"><a href="javascript:">大玉龙雪山景区联票</a></h2>-->
+                                  <!--<span>甘海子位于玉龙雪山东麓,原为高山海子”,这里是纵览玉龙雪山全最佳</span>-->
+                               <!--</div>-->
+                               <!--<div class="feature-btn">-->
+                                 <!--<span>￥315</span>-->
+                                 <!--<a href="javascript:" class="feature-r">加入<br/>购物车</a>-->
+                                 <!--<a href="javascript:" class="feature-l">立即<br/>购买</a>-->
+                               <!--</div>-->
+                           <!--</li>-->
+                           <!--<li>-->
+                               <!--<a href="javascript:" class="feature-img"><img src="../images/img-31.jpg"/></a>-->
+                               <!--<div class="feature-div">-->
+                                  <!--<h2 class="feature-t"><a href="javascript:">大玉龙雪山景区联票</a></h2>-->
+                                  <!--<span>甘海子位于玉龙雪山东麓,原为高山海子”,这里是纵览玉龙雪山全最佳</span>-->
+                               <!--</div>-->
+                               <!--<div class="feature-btn">-->
+                                 <!--<span>￥315</span>-->
+                                 <!--<a href="javascript:" class="feature-r">加入<br/>购物车</a>-->
+                                 <!--<a href="javascript:" class="feature-l">立即<br/>购买</a>-->
+                               <!--</div>-->
+                           <!--</li>-->
+                           <!--<li>-->
+                               <!--<a href="javascript:" class="feature-img"><img src="../images/img-31.jpg"/></a>-->
+                               <!--<div class="feature-div">-->
+                                  <!--<h2 class="feature-t"><a href="javascript:">大玉龙雪山景区联票</a></h2>-->
+                                  <!--<span>甘海子位于玉龙雪山东麓,原为高山海子”,这里是纵览玉龙雪山全最佳</span>-->
+                               <!--</div>-->
+                               <!--<div class="feature-btn">-->
+                                 <!--<span>￥315</span>-->
+                                 <!--<a href="javascript:" class="feature-r">加入<br/>购物车</a>-->
+                                 <!--<a href="javascript:" class="feature-l">立即<br/>购买</a>-->
+                               <!--</div>-->
+                           <!--</li>-->
                          </ul>
                        </div>        
                        <div class="feature-b"> <a href="javascript:">购物车购买</a></div>
@@ -354,3 +355,13 @@
 <script type="text/jscript" src="js/mouse.js"></script>    
 </body>
 </html>
+<script type="application/javascript">
+    angular.module('myApp', []).controller('namecotroll', function($scope,$http) {
+        var url="http://localhost:8080/threeLevel/featureSpot.pi";
+
+        $http.get(url).success( function(json) {
+            $scope.plate = json;
+            console.info(json);
+        });
+    });
+</script>
