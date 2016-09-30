@@ -13,7 +13,7 @@ import java.io.IOException;
 /**
  * Created by Administrator on 2016/9/30.
  */
-@WebServlet("/loginServlet")
+@WebServlet("/backstage/loginServlet")
 public class LoginServlet extends HttpServlet{
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -22,7 +22,7 @@ public class LoginServlet extends HttpServlet{
         User user=new User(username,password);
         UserDao userDao =new UserDao();
         boolean isOk=userDao.findUserByName(user);
-        System.out.println(username+":"+password);
+//        System.out.println(username+":"+password);
         if (isOk){
             req.getSession().setAttribute("user",user);
             resp.sendRedirect("main.html");

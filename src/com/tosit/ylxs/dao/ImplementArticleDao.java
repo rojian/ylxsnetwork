@@ -21,4 +21,11 @@ public interface  ImplementArticleDao {
      * @return Article对象集合
      */
     public List<Article>  selectArticleByPlate(String plate);
+
+    /**
+     * 通过classfication 查询Article数组
+     * @param classfication
+     * @return
+     */
+    public List<Article> selectArticleByClassification(String classfication);
 }
