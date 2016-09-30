@@ -14,7 +14,7 @@ import java.io.PrintWriter;
  * Created by Administrator on 2016/9/30.
  */
 @WebServlet("/backstage/adduserServlet")
-public class AddUserServlet extends HttpServlet{
+public class AdduserServlet extends HttpServlet{
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         PrintWriter out =resp.getWriter();
