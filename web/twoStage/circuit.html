@@ -199,7 +199,7 @@
              
            </div>
            <!--footer end-->
-       
+       </div>
     </div>
 <script type="text/jscript" src="js/mouse.js"></script>
 <script type="application/javascript">
@@ -209,7 +209,6 @@
         var config = {params: {plate: "雪山景区线路"}};
         $http.post(url, postData, config).success( function(json) {
             $scope.xsjqxl = json;
-            console.info(xsjqxl);
         });
         var config = {params: {plate: "大玉龙线路"}};
         $http.post(url, postData, config).success( function(json) {
@@ -217,5 +216,6 @@
         });
     });
 </script>
+
 </body>
 </html>

@@ -6,6 +6,7 @@
 <link rel="stylesheet" type="text/css" href="../css/css.css"/>
 <script type="text/javascript" src="../js/jquery-1.8.3.min.js"></script>
 <script type="text/javascript" src="../js/room-flash.js"></script>
+<script type="application/javascript" src="../js/angular.min.js"></script>
 </head>
 
 <body class="YL-home-body" ng-app="myApp" ng-controller="c">
@@ -66,21 +67,19 @@
                        
                        <div class="spot-title"><span>资源文化</span><div class="spot-a">
                            <div id="wode">
-                         <a fication="历史沿革"> 历史沿革</a><a fication="东巴文化">东巴文化</a><a fication="纳西古乐">纳西古乐</a>
-                         <a fication="白沙壁画">白沙壁画</a><a fication="茶马古道">茶马古道</a><a fication="民风民俗">民风民俗</a>
+                         <a > 历史沿革</a><a >东巴文化</a><a>纳西古乐</a>
+                         <a >白沙壁画</a><a >茶马古道</a><a>民风民俗</a>
                            </div>
                        </div></div>
                        
                        <div class="cultural">
                          
                          <dl ng-controller="c">
-                            <dt ng-repeat="each in dylxl"><a href=""><img src="../images/img-25.jpg"/></a></dt>
+                            <dt ng-repeat="each in zywh"><a href="ficationServlet?id={{each.fication}}"><img src="../images/img-25.jpg"/></a></dt>
                             <dd>
-                               <h1><a href="javascript:">茶马古道--束河古镇</a></h1>
+                               <h1><a href="ficationServlet?id={{each.fication}}">{{each.title}}</a></h1>
                                <div>
-                                  看点：甘海子位于玉龙雪山东麓,原为高山冰蚀湖泊,人称干海子”,这里
-是纵览玉龙雪山全貌的最佳位置看点：甘海子位于玉龙雪山东麓,原为高
-山冰蚀湖泊,人称干海子”,这里是纵览玉龙雪山全貌的最佳位置
+                                 {{each.brief}}
                                </div>
                             </dd>
                          </dl>
@@ -184,14 +183,27 @@
              
            </div>
            <!--footer end-->
-       
+       </div>
     </div>
 <script type="text/jscript" src="js/mouse.js"></script>
 <script type="application/javascript">
 
     $("#wode > a").click(function () {
-        
+        angular.module('myApp', []).controller('c', function($scope,$http) {
+            var url="http://localhost:8080/indexServlet";
+            var postData = {text:'long blob of text'};
+            var config = {params: {plate: "资源文化"}};
+            $http.post(url, postData, config).success( function(json) {
+                $scope.zywh = json;
+            });
     })
+        angular.module('myApp', []).controller('c', function($scope,$http) {
+            var url="http://localhost:8080/indexServlet";
+            var postData = {text:'long blob of text'};
+            var config = {params: {plate: "资源文化"}};
+            $http.post(url, postData, config).success( function(json) {
+                $scope.zywh = json;
+            })
 </script>
 </body>
 </html>
