@@ -49,4 +49,6 @@ public class Shopping {
     public void setStory(String story) {
         this.story = story;
     }
+
+
 }
