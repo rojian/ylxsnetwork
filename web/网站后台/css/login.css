@@ -1,0 +1,6 @@
+﻿* {margin:0;padding:0;color:#000;font-size:13px;list-style-type:none;text-decoration:none;}
+body {font-family: "宋体";margin:0px;background-color: #016aa9;overflow:hidden;}
+#main #main_body{ width:962px; height:516px; background:url(../images/homepage.png) no-repeat 0 0; margin:90px auto;  }
+.middle_word{display:inline; float:left; width:270px; height:110px; margin: 210px 360px; }
+.p_label {float:left;width:270px; height:22px; }
+.in_text{width:105px; height:17px; background-color:#292929; border:solid 1px #7dbad7; font-size:12px; color:#6cd0ff}
