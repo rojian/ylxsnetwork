@@ -2,10 +2,7 @@ package com.tosit.ylxs.dao;
 
 import com.tosit.ylxs.entity.Shopping;
 
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -78,7 +75,22 @@ public class ShoppingDao implements ImplementShoppingDao {
     @Override
     public boolean addShopping(Shopping shopping) {
         boolean isOk=false;
+        Connection conn =null;
+        try {
+            conn= DriverManager.getConnection(URL,USER,PASSWORD);
+            PreparedStatement pstm =conn.prepareStatement("insert into ylxsnetwork_user (username,password) values(?,?)");
+            pstm.setString(1,shopping.getUsername());
+            pstm.setString(2,shopping.getPassword());
+            pstm.setString(1,shopping.getUsername());
+            int i =  pstm.executeUpdate();
+            if (i==0){
+                isOk=false;
+            }
 
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return isOk;
         return  isOk;
     }
 

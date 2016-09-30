@@ -20,7 +20,7 @@ import java.util.List;
 @WebServlet("/ficationServlet")
 public class FicationServlet extends HttpServlet  {
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         PrintWriter out=resp.getWriter();
         String classification=req.getParameter("fication");
         UserDao userDao=new UserDao();
