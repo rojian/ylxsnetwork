@@ -78,7 +78,7 @@ public class ArticleDao implements ImplementArticleDao {
                 String content = result.getString("content");
                 String path = result.getString("path");
                 String uptime = result.getDate("uptime").toString();
-                String classification=result.getString("classification");
+                String classification=result.getString("fication");
                 Article article = new Article();
                 article.setId(id);
                 article.setTitle(title);
@@ -102,9 +102,52 @@ public class ArticleDao implements ImplementArticleDao {
         return articles;
     }
 
+    @Override
+    public List<Article> selectArticleByClassification(String classfication) {
+        List<Article> articles = new ArrayList<>();
+        Connection conn = null;
+        try {
+            conn = DriverManager.getConnection(URL, USER, PASSWORD);
+
+            PreparedStatement pstm = conn.prepareStatement("select*from ylxsnetwork_article  where fication=?");
+            pstm.setString(1, classfication);
+            ResultSet result = pstm.executeQuery();
+            int i=0;
+            while (result.next()&&i<5) {
+                int id = result.getInt("id");
+                String title = result.getString("title");
+                String brief = result.getString("brief");
+                String content = result.getString("content");
+                String path = result.getString("path");
+                String uptime = result.getDate("uptime").toString();
+                String classification=result.getString("fication");
+                Article article = new Article();
+                article.setId(id);
+                article.setTitle(title);
+                article.setBrief(brief);
+                article.setContent(content);
+                article.setPath(path);
+                article.setUptime(uptime);
+                articles.add(article);
+                article.setClassification(classification);
+                i++;
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        try {
+            conn.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return articles;
+    }
+
+
     public static void main(String[] args) {
         ArticleDao articleDao = new ArticleDao();
-        List<Article> articles = articleDao.selectArticleByPlate("景区新闻");
+        List<Article> articles = articleDao.selectArticleByClassification("东巴文化");
         System.out.println(articles.get(1).getUptime());
 
     }
