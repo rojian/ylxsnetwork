@@ -11,7 +11,7 @@ import java.util.List;
  * Created by Administrator on 2016/9/29.
  */
 public class UserDao implements ImplementUserDao {
-    public static final String URL = "jdbc:mysql://192.168.1.112:3306/ylxsnetword";
+    public static final String URL = "jdbc:mysql://192.168.1.113:3306/ylxsnetword";
     public static final String USER = "root";
     public static final String PASSWORD = "root";
     @Override

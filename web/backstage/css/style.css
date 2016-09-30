@@ -52,7 +52,7 @@ position:relative; z-index:9999; cursor:pointer; background:url(../images/bg-con
 #filterServiceOversea{vertical-align:middle;}
 .mail_mod{height:20px;padding:0px;}
 .input_left_text{height:18px;width:30px;}
-.input_left{float:left;height:height:22px;line-height:22px;width:500px;}
+.input_left{float:left;height:22px;line-height:22px;width:500px;}
 .toolbgline_right{float:right;height:22px;line-height:22px;width:180px; text-align:right;}
 table.O2 td{border-bottom:1px solid #C8CFDA;background-color:#f0f0f0;}
 .o_title2{padding-left:5px;border-left:1px solid #C8CFDA;}

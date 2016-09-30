@@ -15,7 +15,7 @@
 	   <h2>修改密码：</h2>
 	 </div>
 	 <div class="main">
-          <form target="" action="" name="" class="addresser">
+          <form target="" action="changePasswordServlet" method="post" name="" class="addresser">
 			<div class="changepwd">	
 			<div class="con_tb">
 				<ul class="p1">
@@ -24,8 +24,8 @@
 				<li style="border:none">请确认密码：</li>
 				</ul>
 				<ul class="p2">
-				<li class="top_b"><input type="password" name="company.companyLoginPwd" class="opwd"/><div class="msg" id="login_modpassword_message"></div></li>
-				<li><input type="password" name="password" id="login_modpassword" class="opwd"/><div class="msg" id="login_modpassword_message"></div></li>
+				<li class="top_b"><input type="password" name="oldpassword" class="opwd"/><div class="msg" id="login_modpassword_message"></div></li>
+				<li><input type="password" name="newpassword" id="login_modpassword" class="opwd"/><div class="msg" id="login_modpassword_message"></div></li>
 				<li class="nobor"><input type="password" name="repassword" class="opwd"/><div class="msg" id="login_modpassword_message"></div></li>
 				</ul>
 								<ul class="mbtn">
