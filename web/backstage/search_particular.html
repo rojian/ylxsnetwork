@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>高级搜索</title>
+<link type="text/css" href="css/base.css"rel="stylesheet" />
+<link type="text/css" href="css/style.css" rel="stylesheet" />
+<link type="text/css" href="css/manage.css" rel="stylesheet" />
+<link type="text/css" href="css/acc_management.css" rel="stylesheet" />
+</head>
+<body>
+<div class="container">
+ <div class="layout">
+	 <div class="title">
+	   <h2>高级搜索：</h2>
+	 </div>
+	 <div class="main">
+          <form target="" action="" name="" class="addresser">
+		    <div class="search_table">	   
+			   <table>
+				  <tbody>
+					  <tr>
+					     <th class="table_th1"><span>关键字：</span></th>
+						 <td><input class="query_text1" type="test" /><input class="query_button" type="button" value="搜索" /></td>
+						
+					  </tr>
+					   <tr>
+					     <th class="table_th1"><span>日期：</span></th>
+						 <td><div class="panel_content">
+                                  从 
+                               <input class="Wdate" type="text" onclick="WdatePicker()">
+                                     到 
+                               <input class="Wdate" type="text" onclick="WdatePicker()">
+                        </div></td>					
+					  </tr>
+					  <tr>
+					     <th class="table_th1"><span>根据：</span></th>
+						 <td><input type="checkbox" id="filterServiceOversea" />
+                             <label for="filterServiceOversea">编号</label>
+                             <input type="checkbox" id="filterServiceOversea" />
+                             <label for="filterServiceOversea">用户名</label>
+                             <input type="checkbox" id="filterServiceOversea" />
+                             <label for="filterServiceOversea">创建日期</label>
+							 <input type="checkbox" id="filterServiceOversea" />
+                             <label for="filterServiceOversea">联系电话</label>
+						 </td>
+					  </tr>
+				  </tbody>
+			   </table>
+			</div>		
+        </form> 
+	 </div><!--end main-->
+ </div> 
+</div>
+</body>
+<script type="text/javascript" src="js/jquery-1.4.4.js"></script>
+<script type="text/javascript" src="datepicker/WdatePicker.js"></script>
+</html>

@@ -1,0 +1,12 @@
+/*tabmenu*/
+.tablist{ float:left; height:30px; border:1px solid #e8e8e8; background:url(../images/bg/bg_tab.gif) repeat-x;}
+.tabwid{ width:100%;}
+.tablist li{ float:left; position:relative; z-index:9; width:80px; line-height:30px; text-align:center; margin-left:5px; cursor:pointer;}
+.tablist li.current{ position:relative; margin-top:-1px; border-top:2px solid #f60; border-left:1px solid #e8e8e8; border-right:1px solid #e8e8e8; background:#fff;}
+.panel_cont{width:100%; position:relative; z-index:1; margin-top:-1px;}
+.panel_tab, t, t1{width:100%;}
+.panellist{ width:100%; margin:10px 0 10px 0;height:30px; background:#f0f0f0; border:1px solid #e8e8e8;}
+.panellist li{ float:left; position:relative; z-index:9; width:80px; line-height:30px; text-align:center; cursor:pointer;}
+.panellist li.select01{ border-right:1px solid #e8e8e8; height:31px; line-height:31px; position:relative; z-index:9; background:#fff; }
+.panellist li.select02{ border-right:1px solid #e8e8e8; height:31px; line-height:31px; position:relative; z-index:9; background:url(../images/bg/bg_tab.gif) repeat-x;}
+

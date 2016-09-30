@@ -2,6 +2,8 @@ package com.tosit.ylxs.dao;
 
 import com.tosit.ylxs.entity.User;
 
+import java.util.List;
+
 /**
  * Created by Administrator on 2016/9/26.
  */
@@ -29,8 +31,12 @@ public interface ImplementUserDao {
      * @param user 是否存在该用户
      * @return
      */
-    public boolean findUser(User user);
+    public boolean findUserByName(User user);
 
-
+    /**
+     * 查询所有用户
+     * @return
+     */
+    public List<User> findAllUser();
 
 }

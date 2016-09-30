@@ -1,0 +1,22 @@
+﻿.detailscon{height:auto!important;}
+input{margin:0px 0px!important;}
+.maintable th, td{ border:none!important; }
+.dialog td, .pop_win .pdialog td {height:24px;font-size: 12px;line-height: 1.8!important;padding:0px!important;}
+.permission_compile{float:left;width:100%;}
+.dialog th, .pop_win .pdialog th {color: #808080;font-size: 12px;font-weight: normal;line-height: 1.8;text-align: right; vertical-align: top;}
+.hdialog td.th, .dialog th {width: 10%;}
+.duty_desc ul li {clear: both;width: 80%;}
+.duty_desc .sort {float: left;width: 10%;}
+.duty_desc .sort_cont {float: left;width: 90%;}
+.pre {margin-bottom: 0;margin-left: 0;margin-right: 0; margin-top: 0;white-space: pre-wrap;word-wrap: break-word;}
+.cdot_ico {background-position: -55px -288px;height: 15px;width: 9px;}
+.modulePerms {width:100%;}
+.duty_desc .sort span{ font-weight: bold;}
+.upbtn {width:100%;margin-top:10px;background-color: #eeeeee;border-bottom:1px solid #EBEBEB;border-top:1px solid #EBEBEB; height: 26px;padding:6px 0px;}
+.upbtn input { margin-left: 8px!important;width: 60px;height:22px;}
+.cdot_ico {background-position: -55px -288px;height: 15px;width: 9px;}
+.duty_desc ul li span.ti {display: block;float: left;padding-right: 8px;width: 20%;}
+.ti label input{vertical-align:middle;} 
+.te {float: left;width: 60%;}
+.remark_g {color: #CCCCCC;font-size: 12px;}
+.dialog{width:100%;}
