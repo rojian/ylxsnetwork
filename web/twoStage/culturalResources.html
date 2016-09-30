@@ -7,6 +7,7 @@
 <script type="text/javascript" src="../js/jquery-1.8.3.min.js"></script>
 <script type="text/javascript" src="../js/room-flash.js"></script>
 <script type="application/javascript" src="../js/angular.min.js"></script>
+
 </head>
 
 <body class="YL-home-body" ng-app="myApp" ng-controller="c">
@@ -63,21 +64,22 @@
                   <div class="culturalLeft">
                   
                      <!--玉龙雪山商务网-二级-资源文化  begin-->
-                     <div class="stage-spot">
+                     <div class="stage-spot" ng-controller="c">
                        
                        <div class="spot-title"><span>资源文化</span><div class="spot-a">
                            <div id="wode">
-                         <a > 历史沿革</a><a >东巴文化</a><a>纳西古乐</a>
-                         <a >白沙壁画</a><a >茶马古道</a><a>民风民俗</a>
+                         <a ng-click="history()"> 历史沿革</a><a ng-click="db()">东巴文化</a><a ng-click="nx()">纳西古乐</a>
+                         <a ng-click="bs()">白沙壁画</a><a ng-click="cm()">茶马古道</a><a ng-click="mf()">民风民俗</a>
                            </div>
                        </div></div>
                        
                        <div class="cultural">
                          
-                         <dl ng-controller="c">
-                            <dt ng-repeat="each in zywh"><a href="ficationServlet?id={{each.fication}}"><img src="../images/img-25.jpg"/></a></dt>
+                         <dl ng-repeat="each in zywh">
+                            <dt >
+                                <a href="../threeLevel/culturalResources.html"><img src="../images/img-25.jpg"/></a></dt>
                             <dd>
-                               <h1><a href="ficationServlet?id={{each.fication}}">{{each.title}}</a></h1>
+                               <h1><a href="../threeLevel/culturalResources.html">{{each.title}}</a></h1>
                                <div>
                                  {{each.brief}}
                                </div>
@@ -185,25 +187,67 @@
            <!--footer end-->
        </div>
     </div>
-<script type="text/jscript" src="js/mouse.js"></script>
-<script type="application/javascript">
+<script type="text/jscript" src="js/mouse.js"></script>>
+    <script type="application/javascript">
+        angular.module('myApp', []).controller('c', function($scope,$http) {
+            $scope.history= function () {
+                var url = "http://localhost:8080/ficationServlet";
+                var postData = {text: 'long blob of text'};
+                var config = {params: {fication:"历史沿革"}};
+                $http.post(url, postData, config).success(function (json) {
+                    $scope.zywh = json;
+                });
+            }
+            $scope.db= function () {
+                var url = "http://localhost:8080/ficationServlet";
+                var postData = {text: 'long blob of text'};
+                var config = {params: {fication:"东巴文化"}};
+                $http.post(url, postData, config).success(function (json) {
+                    $scope.zywh = json;
+                });
+            }
+            $scope.nx= function () {
+                var url = "http://localhost:8080/ficationServlet";
+                var postData = {text: 'long blob of text'};
+                var config = {params: {fication:"纳西古乐"}};
+                $http.post(url, postData, config).success(function (json) {
+                    $scope.zywh = json;
+                });
+            }
+            $scope.bs= function () {
+                var url = "http://localhost:8080/ficationServlet";
+                var postData = {text: 'long blob of text'};
+                var config = {params: {fication:"白沙壁画"}};
+                $http.post(url, postData, config).success(function (json) {
+                    $scope.zywh = json;
+                });
+            }
+            $scope.cm= function () {
+                var url = "http://localhost:8080/ficationServlet";
+                var postData = {text: 'long blob of text'};
+                var config = {params: {fication:"茶马古道"}};
+                $http.post(url, postData, config).success(function (json) {
+                    $scope.zywh = json;
+                });
+            }
+            $scope.mf= function () {
+                var url = "http://localhost:8080/ficationServlet";
+                var postData = {text: 'long blob of text'};
+                var config = {params: {fication:"民风民俗"}};
+                $http.post(url, postData, config).success(function (json) {
+                    $scope.zywh = json;
+                });
+            }
 
-    $("#wode > a").click(function () {
-        angular.module('myApp', []).controller('c', function($scope,$http) {
-            var url="http://localhost:8080/indexServlet";
-            var postData = {text:'long blob of text'};
+            var url = "http://localhost:8080/indexServlet";
+            console.info("nnisindisnd");
+            var postData = {text: 'long blob of text'};
             var config = {params: {plate: "资源文化"}};
-            $http.post(url, postData, config).success( function(json) {
+            $http.post(url, postData, config).success(function (json) {
                 $scope.zywh = json;
+                console.info(json);
             });
-    })
-        angular.module('myApp', []).controller('c', function($scope,$http) {
-            var url="http://localhost:8080/indexServlet";
-            var postData = {text:'long blob of text'};
-            var config = {params: {plate: "资源文化"}};
-            $http.post(url, postData, config).success( function(json) {
-                $scope.zywh = json;
-            })
-</script>
+        });
+    </script>
 </body>
 </html>
