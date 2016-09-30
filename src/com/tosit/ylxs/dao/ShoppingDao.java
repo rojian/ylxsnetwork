@@ -78,20 +78,20 @@ public class ShoppingDao implements ImplementShoppingDao {
         Connection conn =null;
         try {
             conn= DriverManager.getConnection(URL,USER,PASSWORD);
-            PreparedStatement pstm =conn.prepareStatement("insert into ylxsnetwork_user (username,password) values(?,?)");
-            pstm.setString(1,shopping.getUsername());
-            pstm.setString(2,shopping.getPassword());
-            pstm.setString(1,shopping.getUsername());
-            int i =  pstm.executeUpdate();
-            if (i==0){
-                isOk=false;
-            }
+//            PreparedStatement pstm =conn.prepareStatement("insert into ylxsnetwork_user (username,password) values(?,?)");
+//            pstm.setString(1,shopping.getUsername());
+//            pstm.setString(2,shopping.getPassword());
+//            pstm.setString(1,shopping.getUsername());
+//            int i =  pstm.executeUpdate();
+//            if (i==0){
+//                isOk=false;
+//            }
 
         } catch (SQLException e) {
             e.printStackTrace();
         }
         return isOk;
-        return  isOk;
+//        return  isOk;
     }
 
     public static void main(String[] args){
