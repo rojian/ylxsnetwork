@@ -8,7 +8,7 @@
 <script type="text/javascript" src="../js/room-flash.js"></script>
 </head>
 
-<body>
+<body class="YL-home-body" ng-app="myApp" ng-controller="c">
     
     
     <!--top flash begin-->
@@ -65,14 +65,16 @@
                      <div class="stage-spot">
                        
                        <div class="spot-title"><span>资源文化</span><div class="spot-a">
-                         <a href="javascript:">历史沿革</a><a href="javascript:">东巴文化</a><a href="javascript:">纳西古乐</a>
-                         <a href="javascript:">白沙壁画</a><a href="javascript:">茶马古道</a><a href="javascript:">民风民俗</a>
+                           <div id="wode">
+                         <a fication="历史沿革"> 历史沿革</a><a fication="东巴文化">东巴文化</a><a fication="纳西古乐">纳西古乐</a>
+                         <a fication="白沙壁画">白沙壁画</a><a fication="茶马古道">茶马古道</a><a fication="民风民俗">民风民俗</a>
+                           </div>
                        </div></div>
                        
                        <div class="cultural">
                          
-                         <dl>
-                            <dt><a href="javascript:"><img src="../images/img-25.jpg"/></a></dt>
+                         <dl ng-controller="c">
+                            <dt ng-repeat="each in dylxl"><a href=""><img src="../images/img-25.jpg"/></a></dt>
                             <dd>
                                <h1><a href="javascript:">茶马古道--束河古镇</a></h1>
                                <div>
@@ -82,19 +84,6 @@
                                </div>
                             </dd>
                          </dl>
-                         
-                         <dl>
-                            <dt><a href="javascript:"><img src="../images/img-25.jpg"/></a></dt>
-                            <dd>
-                               <h1><a href="javascript:">茶马古道--束河古镇</a></h1>
-                               <div>
-                                  看点：甘海子位于玉龙雪山东麓,原为高山冰蚀湖泊,人称干海子”,这里
-是纵览玉龙雪山全貌的最佳位置看点：甘海子位于玉龙雪山东麓,原为高
-山冰蚀湖泊,人称干海子”,这里是纵览玉龙雪山全貌的最佳位置
-                               </div>
-                            </dd>
-                         </dl>
-                         
                        </div>
                        
                      </div>
@@ -197,6 +186,12 @@
            <!--footer end-->
        
     </div>
-<script type="text/jscript" src="js/mouse.js"></script>    
+<script type="text/jscript" src="js/mouse.js"></script>
+<script type="application/javascript">
+
+    $("#wode > a").click(function () {
+        
+    })
+</script>
 </body>
 </html>

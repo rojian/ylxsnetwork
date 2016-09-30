@@ -5,9 +5,10 @@
 <title>玉龙雪山商务网-二级-线路推荐</title>
 <link rel="stylesheet" type="text/css" href="../css/css.css"/>
 <script type="text/javascript" src="../js/jquery-1.8.3.min.js"></script>
+<script type="application/javascript" src="../js/angular.min.js"></script>
 </head>
 
-<body>
+<body class="YL-home-body" ng-app="myApp" ng-controller="c">
     
     <!--top flash begin-->
     <div class="YL-home-circuit">
@@ -60,53 +61,40 @@
                   <div class="stageLeft">
                   
                      <!--玉龙雪山商务网-二级-线路推荐  begin-->
-                     <div class="stage-spot">
+                     <div class="stage-spot" >
                        
                        <div class="spot-title"><span><a href="javascript:">线路推荐·  </a></span></div>
-                       
-                       <div class="activity">
+                       <!--雪山景区线路-->
+                       <div class="activity" ng-controller="c">
                           
-                          <div class="circuit-text">
-                            <span class="activity-img"><a href="javascript:"><img src="../images/img-15.jpg"/></a>
+                          <div class="circuit-text" ng-repeat="each in xsjqxl">
+                            <span class="activity-img"><a href="threeLevel/activity.do?id={{each.id}}&&number=threeLevel"><img src="../images/img-15.jpg"/></a>
                             <div class="circuit-li">
-                                  <a href="javascript:">冰川地址博物馆惊艳之旅（一日游）</a>
+                                  <a href="threeLevel/activity.do?id={{each.id}}&&number=threeLevel">{{each.title}}</a>
                               </div>
                             </span>
                             <div class="activity-div">
                                <h1></h1>
-                               <span>如何把握这千载难逢的情人节呢，2014年“2.14”世纪情人节，寻觅如何把握这千载难逢的情人节呢，2014年“2.14”世纪情人节，寻觅世纪情人，开启寻爱之旅。借着早...</span>
-                               <a href="javascript:" class="circuit-btn">点击进入</a>
+                               <span>{{each.brief}}</span>
+                               <a href="threeLevel/activity.do?id={{each.id}}&&number=threeLevel" class="circuit-btn">点击进入</a>
                             </div>
                           </div>
-                          
-                          <div class="circuit-text">
-                            <span class="activity-img"><a href="javascript:"><img src="../images/img-15.jpg"/></a>
-                              <div class="circuit-li">
-                                  <a href="javascript:">冰川地址博物馆惊艳之旅（一日游）</a>
-                              </div>
-                            </span>
-                            <div class="activity-div">
-                               <h1></h1>
-                               <span>如何把握这千载难逢的情人节呢，2014年“2.14”世纪情人节，寻觅世纪情人，开启寻爱之旅。借着早...</span>
-                               <a href="javascript:" class="circuit-btn">点击进入</a>
-                            </div>
-                          </div>
-                          
-                          <div class="circuit-text">
-                            <span class="activity-img"><a href="javascript:"><img src="../images/img-15.jpg"/></a>
+                        </div>
+                         <!--大玉龙线路-->
+                           <div class="activity" ng-controller="c">
+
+                               <div class="circuit-text" ng-repeat="each in dylxl">
+                            <span class="activity-img"><a href="threeLevel/activity.do?id={{each.id}}&&number=threeLevel"><img src="../images/img-15.jpg"/></a>
                             <div class="circuit-li">
-                                  <a href="javascript:">冰川地址博物馆惊艳之旅（一日游）</a>
-                             </div>
-                            </span>
-                            <div class="activity-div">
-                               <h1></h1>
-                               <span>如何把握这千载难逢的情人节呢，2014年“2.14”世纪情人节，寻觅世纪情人，开启寻爱之旅。借着早...</span>
-                               <a href="javascript:" class="circuit-btn">点击进入</a>
+                                <a href="threeLevel/activity.do?id={{each.id}}&&number=threeLevel">{{each.title}}</a>
                             </div>
-                          </div>
-                          
-                       </div>
-                       
+                            </span>
+                                   <div class="activity-div">
+                                       <h1></h1>
+                                       <span>{{each.brief}}</span>
+                                       <a href="threeLevel/activity.do?id={{each.id}}&&number=threeLevel" class="circuit-btn">点击进入</a>
+                                   </div>
+                               </div>
                        <!--分页 begin-->
                        <div class="list-page">
                         <a href="javascript:" class="previous">上一页<i class="list-i"><img src="../images/ico-20.png"/></i></a><a href="javascript:">1</a><a href="javascript:" class="select">2</a><a href="javascript:">3</a><a href="javascript:">4</a><a href="javascript:" class="next">下一页<i class="list-a"><img src="../images/ico-21.png"/></i></a>共4页到<a href="javascript:">自定义</a>页<a href="javascript:">确定</a>
@@ -213,6 +201,21 @@
            <!--footer end-->
        
     </div>
-<script type="text/jscript" src="js/mouse.js"></script>    
+<script type="text/jscript" src="js/mouse.js"></script>
+<script type="application/javascript">
+    angular.module('myApp', []).controller('c', function($scope,$http) {
+        var url="http://localhost:8080/indexServlet";
+        var postData = {text:'long blob of text'};
+        var config = {params: {plate: "雪山景区线路"}};
+        $http.post(url, postData, config).success( function(json) {
+            $scope.xsjqxl = json;
+            console.info(xsjqxl);
+        });
+        var config = {params: {plate: "大玉龙线路"}};
+        $http.post(url, postData, config).success( function(json) {
+            $scope.dylxl = json;
+        });
+    });
+</script>
 </body>
 </html>
