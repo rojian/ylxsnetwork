@@ -24,7 +24,7 @@ public class UserDao implements ImplementUserDao {
             pstm.setString(1,user.getUsername());
             pstm.setString(2,user.getPassword());
             pstm.setString(1,user.getUsername());
-            int i =  pstm.executeUpdate();
+            int i =  pstm.executeUpdate();//返回值
             if (i==0){
                 isOk=false;
             }
