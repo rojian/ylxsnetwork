@@ -13,7 +13,7 @@ import java.io.PrintWriter;
 /**
  * Created by Administrator on 2016/9/30.
  */
-@WebServlet("/addduserServlet")
+@WebServlet("/backstage/adduserServlet")
 public class AddUserServlet extends HttpServlet{
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
